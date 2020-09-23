@@ -14,7 +14,7 @@ You can render Partial View using **Html.RenderAction** and **Html.RenderPartial
   
   Order Partial View will be shown as below image
   
-  ![Partial View Model](http://dotnetmentors.com/Images/partial-view-with-model-example.png)
+  ![Partial View Model](https://geeksarray.com/images/blog/partial-view-with-model-example.png)
   
   For more detailed description visit - [ASP.NET MVC Partial View with Model](https://geeksarray.com/blog/render-partialview-with-model)
   
