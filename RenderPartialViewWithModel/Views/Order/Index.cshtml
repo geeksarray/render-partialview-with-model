@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;Partial View Example</h2>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 10px;
+    }
+</style>
+
+<div>
+    <a href="http://dotnetmentors.com"><img src="http://dotnetmentors.com/images/dotnetmentors.png" alt="dotnetmentors.com" /></a>
+</div>
+
+@model  RenderPartialViewWithModel.Models.Order
+   
+<div class="bs-example">
+    <div>
+        <table style=" border-spacing: 10px; border-collapse: separate;">
+            <tr>
+                <td>
+                    <strong>@Html.Label("Order ID:")</strong>
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.OrderID)
+                </td>
+                <td>
+                    <strong>@Html.Label("Customer Name:")</strong>
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.Customer)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>@Html.Label("Order Date:")</strong>
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.OrderDate)
+                </td>
+                <td>
+                    <strong>@Html.Label("Ship City:")</strong>
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.ShipCity)
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div>
+        @{Html.RenderPartial("_orderDetailsWithModel", Model.items);}
+    </div>    
+</div>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" 
+         type="text/javascript"></script>
+    
